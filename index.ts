@@ -1,13 +1,6 @@
 import { Vpc, CfnVPC } from '@aws-cdk/aws-ec2';
 import { Stack, App} from '@aws-cdk/core';
 
-class VpcStack extends Stack {
-  constructor(app: App, id: string) {
-    super(app, id);
-
-    new Vpc(this, 'vpc', {});
-  }
-}
 class CfnVpcStack extends Stack {
   constructor(app: App, id: string) {
     super(app, id);
@@ -17,9 +10,16 @@ class CfnVpcStack extends Stack {
     });
   }
 }
+class VpcStack extends Stack {
+  constructor(app: App, id: string) {
+    super(app, id);
+
+    new Vpc(this, 'vpc', {});
+  }
+}
 
 const app = new App();
-new VpcStack(app, 'VpcStack');
 new CfnVpcStack(app, 'CfnVpcStack');
+new VpcStack(app, 'VpcStack');
 
 app.synth();
