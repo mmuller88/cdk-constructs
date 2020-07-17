@@ -2,15 +2,15 @@
   "name": "src",
   "version": "1.0.0",
   "description": "",
-  "main": "create.js",
+  "main": "index.js",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
     "lint": "eslint --ext .ts ."
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Martin Mueller damadden88@googlemail.com",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^14.0.23",
     "typescript": "~3.9.7",
